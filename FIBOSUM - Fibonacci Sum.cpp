@@ -10,7 +10,7 @@ pair<ll, ll> fib (ll n) {
  
     auto p = fib(n >> 1);
     ll c = ((p.first) * ((2 * p.second)%M + M - p.first))%M;
-    ll d = ((p.first * p.first)%M + (p.second * (p.second%M)))%M;
+    ll d = ((p.first * p.first)%M + (p.second * p.second)%M)%M;
     if (n & 1)
         return {d, c + d};
     else
